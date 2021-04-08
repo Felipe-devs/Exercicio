@@ -1,15 +1,28 @@
-function call() {
-    var inputs = document.getElementsByTagName('input')
-    var input2 = inputs[0];
-    var input1 = inputs[0]
-    var soma = parsefloat.input.value();
+function somar(op) {
+    var n1 = parseFloat(document.getElementById('numero1').value);
+    var n2 = parseFloat(document.getElementById('numero2').value);
 
-    if(soma === '') {
-        alert( 'Insira o números');
-return;
+    if (isNaN(n1) || isNaN(n2)) {
+        alert('Número inválidos!');
+        return
     }
 
-    console.log('Nome: ', nome);
-    window.alert('Hello World, ' + nome + '!');
-    input.value= '';
+    var resultado;
+        switch(op) {
+        case '+':
+        resultado = n1 + n2;
+            break;
+         case '-':
+            resultado = n1 + n2;
+            break;
+    case '/':
+            resultado = n1 + n2;
+            break;
+            case '*':
+            resultado = n1 + n2;
+            break;
+        default:
+            break;
+        }
+    alert('Resultado: ' + resultado);
 }
