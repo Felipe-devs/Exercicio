@@ -1,28 +1,26 @@
-function somar(op) {
+function operacao(op) {
     var n1 = parseFloat(document.getElementById('numero1').value);
     var n2 = parseFloat(document.getElementById('numero2').value);
 
     if (isNaN(n1) || isNaN(n2)) {
         alert('Número inválidos!');
-        return
+        return;
     }
 
     var resultado;
-        switch(op) {
+    switch(op) {
         case '+':
-        resultado = n1 + n2;
-            break;
-         case '-':
             resultado = n1 + n2;
             break;
-    case '/':
-            resultado = n1 + n2;
+        case '-':
+            resultado = n1 - n2;
             break;
-            case '*':
-            resultado = n1 + n2;
+        case '/':
+            resultado = n1 / n2;
             break;
-        default:
+        case '*':
+            resultado = n1 * n2;
             break;
-        }
+    }
     alert('Resultado: ' + resultado);
 }
